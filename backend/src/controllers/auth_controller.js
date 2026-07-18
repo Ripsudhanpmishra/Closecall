@@ -37,7 +37,7 @@ export async function signup(req, res) {
     }
 
     const indx = Math.floor(Math.random()*100)+1;
-    const randomAvatar = `https://avatar.iran.liara.run/public/${indx}.png`;   // find some other websites or apis for random user avatars
+    const randomAvatar = `https://api.dicebear.com/9.x/avataaars/svg?seed=${indx}`;   // find some other websites or apis for random user avatars
 
     const newUser =  await User.create({
       fullName,
